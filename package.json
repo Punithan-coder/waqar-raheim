@@ -8,7 +8,7 @@
     "serve": "^14.2.0"
   },
   "scripts": {
-    "dev": "cd my-frontend && yarn dev --host 0.0.0.0 --port ${PORT:-4173}",
+    "dev": "cd my-frontend && yarn build && npx serve -s dist -l ${PORT:-4173}",
     "build": "cd my-frontend && yarn build",
     "start": "cd my-frontend && npx serve -s dist -l ${PORT:-4173}",
     "preview": "cd my-frontend && yarn preview --host 0.0.0.0 --port ${PORT:-4173}"
