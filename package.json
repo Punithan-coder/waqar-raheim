@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "workspaces": [
+    "my-frontend",
+    "my-node-backend"
+  ],
+  "scripts": {
+    "dev": "cd my-frontend && yarn dev --host 0.0.0.0 --port ${PORT:-4173}",
+    "build": "cd my-frontend && yarn install && yarn build",
+    "preview": "cd my-frontend && yarn preview --host 0.0.0.0 --port ${PORT:-4173}"
+  }
+}
