@@ -1,0 +1,1334 @@
+/* ============================================================
+   INVESTORS PAGE — LUXURY DARK AESTHETIC
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+.inv-page {
+  --gold: #c9a84c;
+  --gold-light: #e8cc7a;
+  --gold-dark: #a0803a;
+  --gold-glow: rgba(201, 168, 76, 0.3);
+  --deep: #050810;
+  --dark: #080d1a;
+  --card: rgba(12, 18, 32, 0.88);
+  --glass: rgba(255, 255, 255, 0.04);
+  --border: rgba(201, 168, 76, 0.15);
+  --tp: #f5f0e8;
+  --ts: rgba(245, 240, 232, 0.6);
+  --tm: rgba(245, 240, 232, 0.35);
+  --green: #06d6a0;
+
+  font-family: 'Outfit', sans-serif;
+  background: var(--deep);
+  color: var(--tp);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Back Button */
+.inv-back-btn {
+  position: fixed;
+  top: 28px;
+  left: 32px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(8, 13, 26, 0.85);
+  border: 1px solid var(--border);
+  color: var(--gold);
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 10px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  backdrop-filter: blur(16px);
+  transition: all 0.3s;
+}
+
+.inv-back-btn:hover {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: var(--gold);
+}
+
+/* ── HERO ── */
+.inv-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 850px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.inv-hero-bg {
+  position: absolute;
+  inset: -20%;
+  background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&auto=format&fit=crop&q=80') center 30%/cover;
+  will-change: transform;
+}
+
+.inv-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 8, 16, 0.35) 0%, rgba(5, 8, 16, 0.65) 40%, rgba(5, 8, 16, 0.95) 85%, #050810 100%);
+}
+
+.inv-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 24px;
+  margin-top: -80px;
+}
+
+.inv-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-bottom: 22px;
+  display: block;
+}
+
+.inv-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 7vw, 96px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--tp);
+  margin: 0 0 22px;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+  display: block;
+}
+
+.inv-hero-sub {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--ts);
+  max-width: 640px;
+  margin: 0 auto 44px;
+  line-height: 1.7;
+}
+
+.inv-hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-gold-inv {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+  border: none;
+  color: #080d1a;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 16px 36px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-gold-inv.lg {
+  padding: 18px 44px;
+  font-size: 15px;
+}
+
+.btn-outline-inv {
+  background: none;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 16px 36px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+
+.btn-outline-inv:hover {
+  background: rgba(201, 168, 76, 0.1);
+}
+
+.btn-wa-inv {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(6, 214, 160, 0.1);
+  border: 1px solid rgba(6, 214, 160, 0.4);
+  color: var(--green);
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 16px 36px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-wa-inv.lg {
+  padding: 18px 44px;
+  font-size: 15px;
+}
+
+.btn-wa-inv:hover {
+  background: rgba(6, 214, 160, 0.18);
+}
+
+.inv-hero-stats {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0;
+  z-index: 2;
+  background: rgba(8, 13, 26, 0.8);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+}
+
+.inv-hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 20px 36px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.inv-hero-stat:last-child {
+  border-right: none;
+}
+
+.inv-hero-stat strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(201, 168, 76, 0.6));
+}
+
+.inv-hero-stat>span {
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: var(--tm);
+  text-transform: uppercase;
+}
+
+.inv-scroll-hint {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.inv-scroll-hint span {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  color: var(--tm);
+  text-transform: uppercase;
+}
+
+.scroll-line-inv {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+
+  0%,
+  100% {
+    opacity: 0.3
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
+/* ── SECTIONS ── */
+.inv-section {
+  padding: 100px 80px;
+}
+
+.inv-section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.inv-eyebrow-sm {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.inv-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  color: var(--tp);
+  margin: 0 0 12px;
+  line-height: 1.1;
+}
+
+.inv-section-sub {
+  font-size: 15px;
+  color: var(--ts);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── OPPORTUNITIES ── */
+.opportunities-section {
+  background: var(--dark);
+}
+
+.opp-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.opp-tab {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--ts);
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  padding: 10px 28px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.opp-tab.active {
+  background: rgba(201, 168, 76, 0.12);
+  border-color: var(--gold);
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+.opp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.opp-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  backdrop-filter: blur(12px);
+  cursor: default;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.opp-card:hover {
+  border-color: rgba(201, 168, 76, 0.45);
+  box-shadow: 0 8px 40px rgba(201, 168, 76, 0.12);
+}
+
+.opp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.opp-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 4px 12px;
+  border-radius: 40px;
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: var(--gold);
+}
+
+.opp-roi-chip {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold-light);
+}
+
+.opp-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--tp);
+  margin: 0 0 10px;
+}
+
+.opp-desc {
+  font-size: 13px;
+  color: var(--ts);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.opp-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 16px;
+}
+
+.opp-min-label {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--tm);
+  text-transform: uppercase;
+}
+
+.opp-min-val {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--tp);
+  flex: 1;
+}
+
+.opp-cta {
+  background: none;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: var(--gold);
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  padding: 7px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.opp-cta:hover {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: var(--gold);
+}
+
+/* ── WHY DUBAI ── */
+.why-dubai-section {
+  background: var(--deep);
+}
+
+.why-dubai-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  backdrop-filter: blur(10px);
+  cursor: default;
+  transition: all 0.3s;
+}
+
+.why-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.why-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--tp);
+  margin: 0 0 8px;
+}
+
+.why-desc {
+  font-size: 13px;
+  color: var(--ts);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── BENEFITS ── */
+.benefits-section {
+  background: var(--dark);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.benefit-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  backdrop-filter: blur(10px);
+  cursor: default;
+  transition: all 0.3s;
+}
+
+.benefit-card:hover {
+  border-color: rgba(201, 168, 76, 0.35);
+}
+
+.benefit-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.benefit-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--tp);
+  margin: 0 0 6px;
+}
+
+.benefit-desc {
+  font-size: 12px;
+  color: var(--ts);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── ROI CALCULATOR ── */
+.calc-section {
+  background: var(--deep);
+}
+
+.roi-calc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px;
+  backdrop-filter: blur(12px);
+}
+
+.roi-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.roi-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.roi-input-group label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.luxury-slider {
+  flex: 1;
+  appearance: none;
+  height: 3px;
+  background: linear-gradient(to right, var(--gold) 0%, rgba(255, 255, 255, 0.1) 0%);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.luxury-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid #080d1a;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+.slider-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--gold-light);
+  min-width: 80px;
+  text-align: right;
+}
+
+.type-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.type-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--ts);
+  font-size: 12px;
+  padding: 7px 14px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Outfit', sans-serif;
+}
+
+.type-pill.active {
+  background: rgba(201, 168, 76, 0.12);
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+.roi-results {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.roi-result-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roi-result-card.primary {
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.1), rgba(201, 168, 76, 0.04));
+  border-color: rgba(201, 168, 76, 0.3);
+}
+
+.result-label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--tm);
+  text-transform: uppercase;
+}
+
+.result-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--tp);
+}
+
+.result-value.gold {
+  color: var(--gold-light);
+}
+
+.result-value.green {
+  color: var(--green);
+}
+
+.roi-bar-chart {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.roi-bar-label {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--tm);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.bar-track {
+  display: flex;
+  height: 28px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: width 0.6s ease;
+}
+
+.bar-fill.investment {
+  background: rgba(201, 168, 76, 0.5);
+  color: #080d1a;
+}
+
+.bar-fill.returns {
+  background: linear-gradient(90deg, #06d6a0, #00b4d8);
+  color: #080d1a;
+}
+
+/* ── RENTAL TABLE ── */
+.rental-section {
+  background: var(--dark);
+}
+
+.rental-table-wrap {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+}
+
+.rental-table-header {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1fr 1fr;
+  padding: 16px 24px;
+  background: rgba(201, 168, 76, 0.06);
+  border-bottom: 1px solid var(--border);
+}
+
+.rental-table-header span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.rental-table-row {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1fr 1fr;
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.2s;
+}
+
+.rental-table-row:last-child {
+  border-bottom: none;
+}
+
+.rental-table-row:hover {
+  background: rgba(201, 168, 76, 0.04);
+}
+
+.rental-area {
+  font-weight: 500;
+  color: var(--tp);
+  font-size: 14px;
+}
+
+.rental-monthly {
+  font-size: 14px;
+  color: var(--ts);
+}
+
+.rental-annual {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rental-annual.gold {
+  color: var(--gold-light);
+}
+
+.rental-occ {
+  font-size: 14px;
+  color: var(--ts);
+}
+
+.rental-trend {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rental-trend.green {
+  color: var(--green);
+}
+
+/* ── MARKET CHARTS ── */
+.charts-section {
+  background: var(--deep);
+}
+
+.charts-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.market-chart {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.chart-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--tp);
+  margin: 0 0 24px;
+}
+
+.chart-bars {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  height: 160px;
+}
+
+.chart-bar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  height: 100%;
+}
+
+.chart-bar-track {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.chart-bar-fill {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  min-height: 4px;
+}
+
+.chart-bar-val {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.chart-bar-label {
+  font-size: 9px;
+  color: var(--tm);
+  letter-spacing: 0.05em;
+}
+
+.market-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.kpi-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.kpi-icon {
+  font-size: 28px;
+}
+
+.kpi-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--gold-light);
+  line-height: 1;
+}
+
+.kpi-label {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--tm);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ── TIMELINE ── */
+.process-section {
+  background: var(--dark);
+}
+
+.timeline-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 24px;
+}
+
+.timeline-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.12);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.timeline-line {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  margin: 8px 0;
+  min-height: 40px;
+}
+
+.timeline-content {
+  padding-bottom: 36px;
+  flex: 1;
+}
+
+.timeline-step {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.timeline-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--tp);
+  margin: 0 0 8px;
+}
+
+.timeline-desc {
+  font-size: 13px;
+  color: var(--ts);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── AREAS ── */
+.areas-section {
+  background: var(--deep);
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.area-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: default;
+  transition: all 0.35s;
+  backdrop-filter: blur(10px);
+}
+
+.area-card:hover {
+  border-color: rgba(201, 168, 76, 0.4);
+  box-shadow: 0 12px 40px rgba(201, 168, 76, 0.12);
+}
+
+.area-card-img-wrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.area-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.area-card:hover .area-card-img-wrap img {
+  transform: scale(1.07);
+}
+
+.area-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(5, 8, 16, 0.75) 100%);
+}
+
+.area-growth-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(6, 214, 160, 0.15);
+  border: 1px solid rgba(6, 214, 160, 0.4);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 40px;
+  backdrop-filter: blur(8px);
+}
+
+.area-card-body {
+  padding: 20px;
+}
+
+.area-card-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--tp);
+  margin: 0 0 14px;
+}
+
+.area-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.area-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.area-stat span {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--tm);
+  text-transform: uppercase;
+}
+
+.area-stat strong {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--tp);
+}
+
+.area-stat strong.gold {
+  color: var(--gold-light);
+}
+
+.area-explore-btn {
+  background: none;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  color: var(--gold);
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.area-explore-btn:hover {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: var(--gold);
+}
+
+/* ── TESTIMONIALS ── */
+.testimonials-section {
+  background: var(--dark);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  cursor: default;
+  transition: all 0.3s;
+}
+
+.testimonial-card:hover {
+  border-color: rgba(201, 168, 76, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.testi-quote-icon {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px;
+  color: var(--gold);
+  opacity: 0.2;
+  line-height: 0.7;
+  margin-bottom: 12px;
+}
+
+.testi-quote {
+  font-size: 14px;
+  color: var(--ts);
+  line-height: 1.7;
+  margin: 0 0 24px;
+  font-style: italic;
+}
+
+.testi-footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testi-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: #080d1a;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testi-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tp);
+  display: block;
+}
+
+.testi-title {
+  font-size: 11px;
+  color: var(--ts);
+  display: block;
+}
+
+.testi-roi {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  padding: 5px 14px;
+  border-radius: 40px;
+  white-space: nowrap;
+}
+
+/* ── CTA ── */
+.inv-cta-section {
+  position: relative;
+  text-align: center;
+  padding: 120px 60px;
+  background: var(--deep);
+  border-top: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.inv-cta-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 350px;
+  background: radial-gradient(ellipse, rgba(201, 168, 76, 0.09) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.inv-cta-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.inv-cta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 300;
+  color: var(--tp);
+  margin: 0 0 20px;
+  line-height: 1.1;
+}
+
+.inv-cta-sub {
+  font-size: 15px;
+  color: var(--ts);
+  max-width: 520px;
+  margin: 0 auto 44px;
+  line-height: 1.7;
+}
+
+.inv-cta-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .inv-section {
+    padding: 72px 40px;
+  }
+
+  .opp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-dubai-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-duo {
+    grid-template-columns: 1fr;
+  }
+
+  .areas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .market-kpi-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .inv-section {
+    padding: 56px 20px;
+  }
+
+  .inv-hero-stats {
+    flex-direction: column;
+    gap: 0;
+    border-radius: 12px;
+    width: calc(100% - 30px);
+  }
+
+  .inv-hero-stat {
+    padding: 14px 20px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .why-dubai-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roi-calc {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 28px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .areas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rental-table-header,
+  .rental-table-row {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .rental-occ,
+  .rental-trend {
+    display: none;
+  }
+
+  .inv-back-btn {
+    top: 16px;
+    left: 16px;
+  }
+
+  .inv-hero-title {
+    font-size: 42px;
+  }
+}
